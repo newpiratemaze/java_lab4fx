@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DataProcessor
 {
-    public void processPipeline(String[] str)
+    public List<List<Integer>> processPipeline(String[] str)
     {
         List<List<Integer>> resultList = new ArrayList<>();
 
@@ -31,6 +31,8 @@ public class DataProcessor
             System.out.println("Группа с наибольшим количеством элементов: "+result);
             System.out.println(" ");
         }
+
+        return resultList;
     }
 
 

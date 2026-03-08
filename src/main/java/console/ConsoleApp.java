@@ -28,7 +28,7 @@ public class ConsoleApp
 
         String[] str = new String[]{"12 3 5 5 14 23 29 38","6 6 15 7 16"};
         System.out.println(str[0]);
-        dataProcessor.processPipeline(str);
+        List<List<Integer>> resultList = dataProcessor.processPipeline(str);
 
 
         List<Integer> result = dataProcessor.processVariant18(list);
