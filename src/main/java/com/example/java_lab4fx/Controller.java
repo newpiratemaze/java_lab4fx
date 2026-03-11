@@ -22,6 +22,7 @@ import core.FileUtils;
 public class Controller {
     @FXML
     public TextArea inputField;
+
     @FXML
     public ListView<String> outputField;
     public FileUtils fileUtils = new FileUtils();

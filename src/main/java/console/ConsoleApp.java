@@ -11,6 +11,7 @@ public class ConsoleApp
     {
         DataProcessor dataProcessor = new DataProcessor();
 
+
         List<Integer> list= new ArrayList<>();
 
         list.add(12);
