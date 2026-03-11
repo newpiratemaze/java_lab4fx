@@ -16,12 +16,15 @@ import java.util.List;
 import java.util.Scanner;
 
 import core.DataProcessor;
+import core.FileUtils;
+
 
 public class Controller {
     @FXML
     public TextArea inputField;
     @FXML
     public ListView<String> outputField;
+    public FileUtils fileUtils = new FileUtils();
 
     @FXML
     public void processSystem()
@@ -64,37 +67,13 @@ public class Controller {
     @FXML
     public void ReadFromFile()
     {
-        try (Scanner scanner = new Scanner(new File("D:\\projects\\Java\\Java_Labs\\lab4FX\\input.txt"))) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                System.out.println(line);
-
-                inputField.setText(inputField.getText()+line+"\n");
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        fileUtils.ReadFromFile(inputField);
     }
 
     @FXML
     public void SaveToFile()
     {
-        ObservableList<String> items = outputField.getItems();
-
-        try (FileWriter writer = new FileWriter("D:\\projects\\Java\\Java_Labs\\lab4FX\\output.txt", false))
-        {
-            for(int i = 0;i<items.size();i++)
-            {
-                writer.write(items.get(i)+"\n");
-
-            }
-
-
-        }
-        catch (Exception e)
-        {
-            System.out.println("Файл не найден");
-        }
+        fileUtils.SaveToFile(outputField);
     }
 
 
