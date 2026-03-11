@@ -15,5 +15,6 @@ public class WindowApp extends Application {
         stage.setTitle("WinApp");
         stage.setScene(scene);
         stage.show();
+
     }
 }

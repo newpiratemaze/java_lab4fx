@@ -15,7 +15,8 @@ public class FileUtils
 
     public void ReadFromFile(TextArea inputField)
     {
-        try (Scanner scanner = new Scanner(new File("D:\\projects\\Java\\Java_Labs\\lab4FX\\input.txt"))) {
+        //try (Scanner scanner = new Scanner(new File("D:\\projects\\Java\\Java_Labs\\lab4FX\\input.txt"))) {
+        try (Scanner scanner = new Scanner(new File("D:\\projects\\Java\\alabs\\java_lab4fx\\input.txt"))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 System.out.println(line);
@@ -32,7 +33,8 @@ public class FileUtils
     {
         ObservableList<String> items = outputField.getItems();
 
-        try (FileWriter writer = new FileWriter("D:\\projects\\Java\\Java_Labs\\lab4FX\\output.txt", false))
+        //try (FileWriter writer = new FileWriter("D:\\projects\\Java\\Java_Labs\\lab4FX\\output.txt", false))
+        try (FileWriter writer = new FileWriter("D:\\projects\\Java\\alabs\\java_lab4fx\\output.txt", false))
         {
             for(int i = 0;i<items.size();i++)
             {
